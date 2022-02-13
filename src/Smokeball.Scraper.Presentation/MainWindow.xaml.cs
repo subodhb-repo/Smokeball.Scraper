@@ -19,7 +19,7 @@ namespace Smokeball.Scraper.Presentation
             _mediator = mediator;
         }
 
-        public void searchButton_Click(object sender, RoutedEventArgs e)
+        private void searchButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
