@@ -19,5 +19,18 @@ namespace Smokeball.Scraper.UnitTests.Presentation
             // Assert
             Assert.Equal("1, 2, 3", result);
         }
+
+        [Fact]
+        public void SearchButton_Click_WhenNoPositionFound()
+        {
+            // Arrange
+            var positions = new List<int>();
+
+            // Act
+            var result = positions.Format();
+
+            // Assert
+            Assert.Equal(string.Empty, result);
+        }
     }
 }
