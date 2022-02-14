@@ -19,10 +19,10 @@ namespace Smokeball.Scraper.Application.SyncDataServices.Http
         public async Task<string> GetGoogleSearchResult(string searchString, int take)
         {
             string url = $"search?num={take}&q={HttpUtility.UrlEncode(searchString)}";
-            var request = new HttpRequestMessage(HttpMethod.Get, url);
-            var response = _httpClient.Send(request);
+            var request = new HttpRequestMessage(HttpMethod.Get, url);            
             try
             {
+                var response = _httpClient.Send(request);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadAsStringAsync();
             }
